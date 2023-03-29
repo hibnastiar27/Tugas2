@@ -21,7 +21,8 @@
 .sidebar.active {
   width: 60px;
 }
-.sidebar .logo-details {
+.sidebar .logo-details a {
+  text-decoration: none;
   background-color: transparent;
   padding: 10px 15px;
   display: flex;
@@ -32,6 +33,7 @@
   font-size: 24px;
   font-weight: 500;
 }
+
 .sidebar .logo-details i {
   font-size: 28px;
   font-weight: 500;
@@ -146,11 +148,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f6fa;
-  border: 2px solid #efeef1;
-  border-radius: 6px;
+  background-color: #ed7823;
+  border-radius: 8px;
   height: 50px;
-  min-width: 190px;
+  padding: 14px 14px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.home-section nav .profile-details i {
+  color: #fff;
+  font-size: 20px;
 }
 
 nav .profile-details .admin_name {
