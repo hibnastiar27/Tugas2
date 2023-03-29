@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/logo-nav.svg" />
+
+    <!-- link css dasboard -->
+    <link rel="stylesheet" href="../css/dashboard.css" />
+
+    <!-- link fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/d7f673dfd5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Catalog Entry</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="../img/logo-nav.svg" alt="logo-rent" />
+        <p><span>Rent</span>Apart</p>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="../dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="catalog.html" class="active">
+            <i class="fa-solid fa-file"></i>
+            <span class="links_name">Catalog</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="transaction.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="links_name">Transaction</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../index.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Akhir Sidebar -->
+
+    <!-- Home Section -->
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="fa-solid fa-angles-right sidebarBtn"></i>
+        </div>
+        <div class="profile-details">
+          <span class="admin_name">Rent Apart</span>
+        </div>
+      </nav>
+
+      <!-- isi konten -->
+      <div class="home-content">
+        <h3>Input Categories</h3>
+        <div class="form-login">
+          <form action="">
+            <label for="categories">Type</label>
+            <input
+              class="input"
+              type="text"
+              name="categories"
+              id="categories"
+              placeholder="Categories"
+            />
+            <label for="categories">Price</label>
+            <input
+              class="input"
+              type="text"
+              name="price"
+              id="price"
+              placeholder="Price"
+            />
+            <label for="photo">Photo</label>
+            <input
+              type="file"
+              name="photo"
+              id="photo"
+              style="margin-bottom: 20px"
+            />
+            <button type="submit" class="btn btn-simpan" name="simpan">
+              Simpan
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- isi konten -->
+    </section>
+    <!-- Home Section -->
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("fa-angles-right", "fa-angles-left");
+        } else
+          sidebarBtn.classList.replace("fa-angles-left", "fa-angles-right");
+      };
+    </script>
+  </body>
+</html>

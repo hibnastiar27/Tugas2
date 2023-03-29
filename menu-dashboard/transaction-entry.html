@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction Entry | RentApart</title>
+    <link rel="icon" href="../img/logo-nav.svg" />
+
+    <!-- link css dasboard -->
+    <link rel="stylesheet" href="../css/dashboard.css" />
+
+    <!-- link fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/d7f673dfd5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="../img/logo-nav.svg" alt="logo-rent" />
+        <p><span>Rent</span>Apart</p>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="../dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="catalog.html">
+            <i class="fa-solid fa-file"></i>
+            <span class="links_name">Catalog</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="transaction.html" class="active">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="links_name">Transaction</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../index.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar -->
+
+    <!-- Home Section -->
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="fa-solid fa-angles-right sidebarBtn"></i>
+        </div>
+
+        <div class="profile-details">
+          <span class="admin_name">Rent Apart</span>
+        </div>
+      </nav>
+
+      <div class="home-content">
+        <h3>Input Transaction</h3>
+        <div class="form-login">
+          <form action="">
+            <label for="nama">Name</label>
+            <input
+              class="input"
+              type="text"
+              name="nama"
+              id="nama"
+              placeholder="Name"
+            />
+
+            <label for="jenis">Type</label>
+            <input
+              class="input"
+              type="text"
+              name="jenis"
+              id="jenis"
+              placeholder="Type Apartement"
+            />
+
+            <label for="idApart">ID Apart</label>
+            <select name="idApart" id="idApart">
+              <option>RAD001</option>
+              <option>RAD002</option>
+            </select>
+
+            <label for="harga">Price</label>
+            <input
+              class="input"
+              type="text"
+              name="harga"
+              id="harga"
+              placeholder="Price"
+            />
+
+            <label for="tgl">Date</label>
+            <input
+              class="input"
+              type="date"
+              name="tgl"
+              id="tgl"
+              style="margin-bottom: 20px"
+            />
+
+            <button type="submit" class="btn btn-simpan" name="simpan">
+              Simpan
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Home Section -->
+
+    <!-- animasi -->
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("fa-angles-right", "fa-angles-left");
+        } else
+          sidebarBtn.classList.replace("fa-angles-left", "fa-angles-right");
+      };
+    </script>
+    <!-- akhir animasi -->
+  </body>
+</html>

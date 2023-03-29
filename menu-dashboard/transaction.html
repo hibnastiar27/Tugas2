@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link css dasboard -->
+    <link rel="stylesheet" href="../css/dashboard.css" />
+
+    <!-- link fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/d7f673dfd5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="shortcut icon" href="../img/logo-nav.svg" type="image/x-icon" />
+
+    <title>Catshop Admin | Transaction</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="../img/logo-nav.svg" alt="logo-rent" />
+        <p><span>Rent</span>Apart</p>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="../dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="catalog.html">
+            <i class="fa-solid fa-file"></i>
+            <span class="links_name">Catalog</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="transaction.html" class="active">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="links_name">Transaction</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../index.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Akhir Sidebar -->
+
+    <!-- home-section -->
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="fa-solid fa-angles-right sidebarBtn"></i>
+        </div>
+        <div class="profile-details">
+          <span class="admin_name">Rent Apart</span>
+        </div>
+      </nav>
+      <div class="home-content">
+        <h3>Trasaction</h3>
+        <button type="button" class="btn btn-tambah">
+          <a href="transaction-entry.html">Tambah Data</a>
+        </button>
+        <table class="table-data">
+          <thead>
+            <tr>
+              <th style="width: 20%">Nama</th>
+              <th>Type Apartement</th>
+              <th>ID Apart</th>
+              <th style="width: 20%">Price</th>
+              <th style="width: 20%">Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nur Aria Hibnastiar</td>
+              <td>Duplex</td>
+              <td>RAD001</td>
+              <td>Rp.2,000,000</td>
+              <td>27-03-2023</td>
+              <td>
+                <a href="">Edit</a> <br />
+                <a href="">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- home-section -->
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("fa-angles-right", "fa-angles-left");
+        } else
+          sidebarBtn.classList.replace("fa-angles-left", "fa-angles-right");
+      };
+    </script>
+  </body>
+</html>
