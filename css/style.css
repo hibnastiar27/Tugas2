@@ -78,10 +78,10 @@ nav .cta-nav a button {
 
 /* Main */
 main {
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   padding: 0px 80px;
-  /* background-color: black; */
   color: white;
 }
 
@@ -242,8 +242,11 @@ main .right-main img {
     font-size: 38px;
   }
 
+  main .right-main {
+    margin: auto;
+  }
+
   main .right-main img {
-    margin-top: 40px;
-    width: 350px;
+    width: 100%;
   }
 }
