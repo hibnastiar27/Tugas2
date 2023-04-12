@@ -10,12 +10,13 @@ function autoKetik() {
   words.innerHTML = text[j].slice(0, i);
   i++;
 
-  //  membatasi kata yang muncul
+  //  membatasi huruf yang muncul
   if (i > text[j].length) {
     i = 0;
+    j++;
 
     // membatasi nilai index
-    if (++j === text.length) {
+    if (j === text.length) {
       j = 0;
     }
   }

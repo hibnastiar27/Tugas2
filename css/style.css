@@ -78,7 +78,6 @@ nav .cta-nav a button {
 
 /* Main */
 main {
-  height: 100vh;
   display: flex;
   justify-content: space-between;
   padding: 0px 80px;
@@ -193,6 +192,8 @@ main .right-main img {
 
   header main {
     padding: 10px 30px;
+    justify-content: start;
+    gap: 48px;
     flex-direction: column;
   }
 
@@ -243,7 +244,7 @@ main .right-main img {
   }
 
   main .right-main {
-    margin: auto;
+    /* margin: auto; */
   }
 
   main .right-main img {
